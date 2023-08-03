@@ -1,0 +1,32 @@
+.icon-text {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__image {
+        margin:0 4px 0 0;
+    }
+
+    &__text {
+        font-size: 11px;
+    }
+
+    &__text--large {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    
+    .icon-text {
+
+        &__text {
+            font-size: 16px;
+        }
+
+        &__text--large {
+            font-size: 16px;
+        }
+    }
+
+}   

@@ -1,0 +1,22 @@
+
+$palette: (
+    primary: #1943EF,
+    base: #222,
+    text: #73738D,
+    button: #FFF,
+    icon: #26C296,
+    detail: rgba(34, 34, 34, 0.80),
+    information: rgba(34, 34, 34, 0.60),
+    ring-orange: #F26A36,
+    ring-blue: #64CCE3
+);
+
+@font-face {
+    font-family: OpenSansRegular;
+    src: url('../fonts/OpenSans/OpenSans-Regular.woff');
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url('../fonts/OpenSans/OpenSans-Bold.woff');
+}

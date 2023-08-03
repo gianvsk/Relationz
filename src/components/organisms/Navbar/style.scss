@@ -1,0 +1,27 @@
+.navbar {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:1;
+    padding: 52px 20px;
+
+    &__burger {
+        display: flex;
+    }
+}
+
+@media screen and (min-width:768px) {
+    
+    .navbar {
+        padding: 37px 160px;
+
+        &__burger {
+            display:none;
+        }
+    }
+
+}

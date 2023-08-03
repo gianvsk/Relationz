@@ -1,0 +1,19 @@
+
+.text-list-wrapper {
+
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__icon {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display:flex;
+    }
+}
+
+.list-item {
+    width:50%;
+}

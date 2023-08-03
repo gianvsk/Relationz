@@ -1,0 +1,15 @@
+
+
+.text-paragraph {
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .text-paragraph {
+        gap:26px;
+    }
+    
+}
