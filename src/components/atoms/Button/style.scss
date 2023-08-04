@@ -8,6 +8,7 @@
     align-items: center;
 
     &--small {
+        width:20%;
         height: 22.552px;
         border-radius: 20.938px;
     }
@@ -41,8 +42,9 @@
         font-size: 16px;
 
         &--small {
-            height: 22.552px;
-            border-radius: 20.938px;
+            height:100%;
+            width:20%;
+            border-radius: 21px;
         }
         
         &--default {
@@ -52,8 +54,9 @@
         }
         
         &--large {
+            width: 225px;
             border-radius: 49px;
-            height: 60px;
+            padding:13px 12px;
         }
     }
 

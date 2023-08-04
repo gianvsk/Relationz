@@ -22,9 +22,9 @@ export const TitleSearchbar = () => {
                 <Searchbar></Searchbar>
             </div>
             <div className='title-searchbar__list'>
-                <IconText text='Synced contacts'/>
-                <IconText text='Regular reminders'/>
-                <IconText text='The multichannel'/>
+                <IconText text='Synced contacts' large={true}/>
+                <IconText text='Regular reminders' large={true}/>
+                <IconText text='The multichannel' large={true}/>
             </div>
         </div>
     )

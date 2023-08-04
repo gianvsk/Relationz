@@ -1,0 +1,37 @@
+.icon-bar-image {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:80.5px;
+    margin: 168.43px 0 0 0;
+    
+    &__image {
+        width:100%;
+        box-sizing: border-box;
+        padding:0 59px;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .icon-bar-image {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap:167px;
+
+        &__title-wrapper {
+            width:57%;
+        }
+
+        &__image {
+            width:34%;
+            padding:0;
+        }
+
+        &__multi-icons {
+            width:100%;
+        }
+    }
+
+}

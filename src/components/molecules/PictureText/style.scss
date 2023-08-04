@@ -1,0 +1,44 @@
+.picture-text {
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 17px 13px 16px 15px;
+    box-shadow: 0px 12.316177368164062px 49.26470947265625px 0px #F2F5FA;
+
+    &--spacing-off {
+        padding:0;
+        align-items: center;
+    }
+
+    &__image {
+        width:30px;
+        height:30px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__text {
+        margin: 0 0 0 10px;
+        width:100%;
+
+        &--spacing-off {
+            margin:0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .picture-text {
+
+        &__image {
+            width:48px;
+            height:48px;
+        }
+
+        &__text {
+            margin: 0 0 0 12px;
+        }
+    }
+
+}

@@ -1,16 +1,34 @@
 import './App.css'
-import { ImageMultiIcon } from './components/molecules/ImageMultiIcon/ImageMultiIcon'
+import { Card } from './components/molecules/Card/Card'
+import { IconBarImage } from './components/organisms/IconBarImage/IconBarImage'
 import { Navbar } from './components/organisms/Navbar/Navbar'
-import { TitleSearchbar } from './components/organisms/TitleSearchbar/TitleSearchbar'
+import { ParagraphListCard } from './components/organisms/ParagraphListCard/ParagraphListCard'
 
 function App() {
 
   return (
-  <>
-      <Navbar/>
-      <TitleSearchbar/>
-      <ImageMultiIcon/>
-      </>
+    <>
+      <Navbar />
+      <IconBarImage />
+      <ParagraphListCard/>
+      <Card 
+        title='Send content around anxiety' 
+        text='3 people on the list'
+        source= {[{ 
+          picture: '/images/pictures/User1.jpg',
+          titleImage: 'Ciao'
+        }, 
+        {
+          picture: '/images/pictures/User2.jpg',
+          titleImage: 'Ciao2'
+        },
+        {
+          picture: '/images/pictures/User3.jpg',
+          titleImage: 'Ciao3'
+        }  
+      ]}
+        />
+    </>
   )
 }
 

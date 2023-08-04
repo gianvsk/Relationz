@@ -1,7 +1,7 @@
 .title-searchbar {
     display: flex;
     flex-direction: column;
-    margin: 138.4px 0 80px 0;
+    margin: 138.4px 0 0 0;
 
     &__titles-container {
         display: flex;
@@ -54,6 +54,7 @@
         }
 
         &__list {
+            width:82%;
             margin: 28.73px 0 0 0;
             display:flex;
             align-items: center;

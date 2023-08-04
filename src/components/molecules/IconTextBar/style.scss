@@ -17,6 +17,17 @@
         margin: 0 12px 0 0;
     }
 
+    &__bar-container {
+
+        &--small {
+            display:flex;
+        }
+
+        &--large {
+            display:none;
+        }
+    }
+
     &__bar {
         margin:0 0 20px 0;
 
@@ -30,4 +41,30 @@
         }
 
     }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .icon-text-bar {
+
+        &__bar-container {
+
+            &--small {
+                display:none;
+            }
+
+            &--large {
+                display:flex;
+            }
+        }
+
+        &__bar {
+
+            &--empty {
+                width:248px;
+                height:5px;
+            }
+        }
+    }
+
 }

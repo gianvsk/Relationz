@@ -1,7 +1,8 @@
+import './style.scss'
 import { IconText } from "../../atoms/IconText/IconText"
 import { TextParagraph } from "../../atoms/TextParagraph/TextParagraph"
 
-type TextLinkWrapperProps = {
+type TextListWrapperProps = {
     source: string
     title: string
     text: string
@@ -11,24 +12,24 @@ type TextLinkWrapperProps = {
     textIcon4: string
 }
 
-export const TextLinkWrapper = ({ source, title, text, textIcon1, textIcon2, textIcon3, textIcon4 }: TextLinkWrapperProps) => {
+export const TextListWrapper = ({ source, title, text, textIcon1, textIcon2, textIcon3, textIcon4 }: TextListWrapperProps) => {
 
     return (
 
-        <div className="text-link-wrapper">
-            <img className='text-link-wrapper__icon' src={source} />
+        <div className="text-list-wrapper">
+            <img className='text-list-wrapper__icon' src={source} />
             <TextParagraph title={title} text={text} />
-            <ul className='text-link-wrapper_list'>
-                <li className='list-item'>
+            <ul className='text-list-wrapper__list'>
+                <li className='text-list-wrapper__list-item'>
                     <IconText text={textIcon1} iconLight={true} large={true} />
                 </li>
-                <li className='list-item'>
+                <li className='text-list-wrapper__list-item'>
                     <IconText text={textIcon2} iconLight={true} large={true} />
                 </li>
-                <li className='list-item'>
+                <li className='text-list-wrapper__list-item'>
                     <IconText text={textIcon3} iconLight={true} large={true} />
                 </li>
-                <li className='list-item'>
+                <li className='text-list-wrapper__list-item'>
                     <IconText text={textIcon4} iconLight={true} large={true} />
                 </li>
             </ul>

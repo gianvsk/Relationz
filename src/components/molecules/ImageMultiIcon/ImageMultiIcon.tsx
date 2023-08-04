@@ -1,16 +1,16 @@
 import { IconTextBar } from "../IconTextBar/IconTextBar"
 import './style.scss'
 
-type ImageMultiIcon = {
-    source: string
+type MultiIcon = {
+    source1: string
+    source2: string
+    source3: string
 }
 
-export const ImageMultiIcon = () => {
+export const MultiIcon = () => {
 
     return (
-
         <div className="image-multi-icon">
-            <img className='image-multi-icon__image' src='/images/pictures/Phone.png' />
             <div className='image-multi-icon__icon-container'>
                 <div className='image-multi-icon__icon-text'>
                     <IconTextBar source='/images/icons/BlueBell.svg' text='Get Reminders' />
