@@ -1,5 +1,5 @@
 .searchbar {
-    width:276px;
+    width:80%;
     height:40px;
     background-color: #FFF;
     border-radius:49px;
@@ -10,6 +10,7 @@
 
 
     &__input {
+        width:80%;
         background-color: #FFF;
         color:#000;
         border:0;

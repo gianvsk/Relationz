@@ -1,0 +1,41 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:50%;
+
+    li {
+        margin: 0;
+    }
+
+    &__title {
+        margin: 0 0 15px 0;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .list {
+        width: 25%;
+
+        &__title {
+            margin: 0 0 24px 0;
+        }
+
+        &__text {
+            gap: 18.24px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+}

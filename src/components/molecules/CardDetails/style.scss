@@ -1,0 +1,50 @@
+.card-detail {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px 24px 0 0;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 20px 80px 0px #F2F5FA;
+    padding: 24.37px 13px 23.63px 24px;
+
+    &__text-spacer {
+       /*  margin: 20.42px 0 21.35px 0; */
+    }
+
+    &__span {
+        margin: 20.42px 0 0 0;
+    }
+
+    &__icon-text {
+        display:flex;
+        gap:11px;
+    }
+
+    &__body {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 15.26px 0 0 0;
+        gap:11px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    
+    .card-detail {
+        height:100%;
+
+        &__span {
+            margin: 24px 0 0 0;
+        }
+
+        &__body {
+            gap:24.53px;
+        }
+    }
+
+}

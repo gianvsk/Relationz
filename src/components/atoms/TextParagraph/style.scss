@@ -1,15 +1,41 @@
-
-
 .text-paragraph {
-    display:flex;
-    flex-direction: column;
-    gap:15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &--card {
+        border-radius: 3.589px;
+        background: #FFF;
+        box-shadow: 0px 5.982142925262451px 23.928571701049805px 0px #F2F5FA;
+        padding:15px 20px;
+        align-items: flex-end;
+        gap:16px;
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &--gap-small {
+            gap: 8px;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
 
     .text-paragraph {
-        gap:26px;
+
+        &__texts {
+            gap: 26px;
+
+            &--gap-small {
+                gap: 10px;
+            }
+        }
+
     }
-    
+
 }

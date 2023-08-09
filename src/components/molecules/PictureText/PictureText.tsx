@@ -7,16 +7,26 @@ type PictureText = {
     title: string
     text?: string
     spacingOff?: boolean
+    cardType?: 'card' | 'card-large'
 }
 
-export const PictureText = ({ source, title, text, spacingOff }: PictureText) => {
+export const PictureText = ({ source, title, text, spacingOff, cardType }: PictureText) => {
 
     return (
-        <div className={clsx('picture-text', { 'picture-text--spacing-off': spacingOff })}>
-            {source && <img className='picture-text__image' src={source} />}
-            <div className={clsx('picture-text__text', {'picture-text__text--spacing-off' : spacingOff})}>
-                <Text tag='h4' modifier={text ? 'heading4-large' : ''}>{title}</Text>
-                {text && <Text tag='span' modifier='span-icon'>{text}</Text>}
+        <div className={clsx('picture-text', { 'picture-text--spacing-off': spacingOff,
+                                               'no-box-shadow': spacingOff,
+                                               'picture-text--no-padding': cardType === 'card' || cardType === 'card-large'})}>
+            <div className={clsx('picture-text__container', { 'picture-text__container--card-large': cardType === 'card-large' })}>
+                {source && <img className={clsx('picture-text__image',
+                    {
+                        'picture-text__image--card': cardType === 'card',
+                        'picture-text__image--card-large': cardType === 'card-large'
+                    })}
+                    src={source} />}
+                <div className={clsx('picture-text__text')}>
+                    <Text tag='h4' modifier={text ? 'heading4-large' : ''}>{title}</Text>
+                    {text && <Text tag='span' modifier='span-icon'>{text}</Text>}
+                </div>
             </div>
         </div>
     )

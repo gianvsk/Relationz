@@ -7,18 +7,20 @@ import './style.scss'
 type CardProps = {
     title: string
     text: string
+    paragraph: string
     source: {
         picture: string,
         titleImage: string,
     }[]
 }
 
-export const Card = ({ title, text, source }: CardProps) => {
+export const Card = ({ title, text, source, paragraph }: CardProps) => {
 
     return (
         <div className="card">
             <div className='card__header'>
-                <PictureText title={title} text={text} spacingOff={true} />
+                <Text tag='h4' modifier='heading4-large'>{title}</Text>
+                <Text tag='p' modifier='span-icon-small'>{text}</Text>
             </div>
             <div className='card__spacer'></div>
             <div className='card__body'>
@@ -26,9 +28,12 @@ export const Card = ({ title, text, source }: CardProps) => {
                 <div className='card__images-container'>
                     {source.map(el => (
                         <div className='card__user'>
-                            <PictureText source={el.picture} title={el.titleImage} spacingOff={true}/>
+                            <PictureText source={el.picture} title={el.titleImage} spacingOff={true} cardType='card' />
                         </div>
                     ))}
+                    <div className='card__paragraph'>
+                        <Text tag='p' modifier='paragraph-small'>{paragraph}</Text>
+                    </div>
                 </div>
             </div>
             <div className='card__footer'>

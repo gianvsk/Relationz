@@ -1,0 +1,102 @@
+.picture-paragraph {
+    margin: 80px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 19.11px;
+        border-radius: 5.462px;
+        background: #FFF;
+        box-shadow: 0px 9.103260040283203px 36.41304016113281px 0px #F2F5FA;
+    }
+
+    &__title {
+        margin: 0 0 80px 0;
+    }
+
+    &__title-secondary {
+        margin: 51.82px 0 0 0;
+    }
+
+    &__main-picture {
+        width: 60px;
+        height: 60px;
+        top: -30px;
+        position: absolute;
+        border-radius: 50.523px;
+        border: 3.641px solid #FFF;
+        background: url('/images/pictures/User7.jpg'), lightgray -10.029px 1.436px / 136.405% 199.617% no-repeat;
+        background-size: 150%;
+        background-position: 50% 0%;
+        box-shadow: 0px 2.9799346923828125px 11.91973876953125px 0px #F2F5FA, 0px 2.9799346923828125px 11.91973876953125px 0px #F2F5FA, 0px 2.9799346923828125px 11.91973876953125px 0px #F2F5FA;
+    }
+
+    &__icons-container {
+        display: flex;
+        justify-content: center;
+        margin: 19.11px 0 0 0;
+    }
+
+    &__paragraph {
+        margin-top: 10px;
+    }
+
+    &__secondary-image {
+        width: 91px;
+        margin: 20.91px 0 25.14px 0;
+    }
+}
+
+.scroll-container {
+    display: flex;
+    justify-content: center;
+
+    &__scroll {
+        margin: 20.54px 0 0 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .picture-paragraph {
+
+        &__title-secondary {
+            margin: 86.38px 0 0 0;
+        }
+
+        &__body {
+            width:55%;
+            padding: 0 42px;
+        }
+
+        &__main-picture {
+            width: 125px;
+            height: 125px;
+            top: -62.5px;
+            border-radius: 111px;
+            border: 8px solid #FFF;
+            background: url(<path-to-image>), lightgray -20.894px 2.992px / 136.405% 199.617% no-repeat, #FFF;
+            box-shadow: 0px 6.546961307525635px 26.18784523010254px 0px #F2F5FA, 0px 6.546961307525635px 26.18784523010254px 0px #F2F5FA, 0px 6.546961307525635px 26.18784523010254px 0px #F2F5FA;
+        }
+
+        &__secondary-image {
+            width: 160px;
+        }
+
+    }
+
+    .scroll-container {
+
+        &__scroll {
+            width:85px;
+            margin: 48.38px 0 0 0;
+        }
+
+    }
+
+}

@@ -5,7 +5,8 @@ import './style.scss'
 type TextProps = {
     tag: 'a' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p'
     modifier?: 'span-small' | 'span-large' | 'span-icon' | 'span-account' | 'span-text' | 'span-icon-small' | 'paragraph-text' |
-                'logo' | 'heading4-large' | 'span-extra-small' |''
+                'logo' | 'heading4-large' | 'span-extra-small' | 'paragraph-small' | 'paragraph-large' | 'heading5-bold' | 
+                'heading4-extra-large' | 'heading4-extra-large-bold' | 'link-small' | 'heading2-small' | ''
     children: React.ReactNode
 }
 
@@ -56,10 +57,24 @@ export const Text = ({tag, modifier, children} : TextProps) => {
                 return 'span span--extra-small'
             case 'paragraph-text':
                 return 'paragraph paragraph--text'
+            case 'paragraph-small':
+                return 'paragraph paragraph--small'
+            case 'paragraph-large':
+                return 'paragraph paragraph--large'
             case 'logo':
                 return 'heading1 heading1--logo'
+            case 'heading2-small':
+                return 'heading2 heading2--small'
             case 'heading4-large':
                 return 'heading4 heading4--large'
+            case 'heading4-extra-large':
+                return 'heading4 heading4--extra-large'
+            case 'heading4-extra-large-bold':
+                return 'heading4 heading4--extra-large-bold'
+            case 'heading5-bold':
+                return 'heading5 heading5--bold'
+            case 'link-small':
+                return 'link link--small'
             case '':
                 return ''
             default:
