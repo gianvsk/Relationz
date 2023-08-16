@@ -28,6 +28,10 @@
 
     .text-paragraph {
 
+        &--card {
+            align-items: center;
+        }
+
         &__texts {
             gap: 26px;
 

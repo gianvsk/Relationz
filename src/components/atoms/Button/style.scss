@@ -16,13 +16,12 @@
     &--default {
         border-radius: 20.938px;
         height:30px;
-    
     }
     
     &--large {
         border-radius: 49px;
-        width:99px;
-        height: 40px;
+        width:40.57%;
+        height: 30px;
     }
     
     &--blue {
@@ -49,14 +48,34 @@
         
         &--default {
             border-radius: 49px;
-            height:60px;
+            height:46px;
             width:171px;
         }
         
         &--large {
             width: 225px;
             border-radius: 49px;
-            padding:13px 12px;
+            height:60px;
+        }
+
+        &--blue {
+            background-color: map-get($palette, primary);
+        }
+
+        &--no-ios {
+            background-color: map-get($palette, icon);
+        }
+
+        &--large-empty-blue {
+            background-color: #FFF;
+            border: 1.5px solid map-get($palette, primary);
+            color: map-get($palette, primary);
+        }
+
+        &--large-empty-green {
+            background-color: #FFF;
+            border: 1.5px solid map-get($palette, icon);
+            color: map-get($palette, icon)
         }
     }
 

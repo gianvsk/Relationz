@@ -16,6 +16,10 @@
     &__links-button {
         display:none;
     }
+
+    &__button {
+        display:none;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -39,6 +43,10 @@
             gap:27px;
             margin: 0 20px 0 0;
         }
+
+        &__button {
+            display:flex;
+        }
     }
 
 }
@@ -51,6 +59,12 @@
 
         &__burger {
             display:none;
+        }
+
+        &__ring {
+            position:absolute;
+            left:calc(35%);
+            top:0px;
         }
 
         &__links {

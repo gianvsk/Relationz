@@ -4,11 +4,19 @@
     justify-content: center;
     gap:80.5px;
     margin: 168.43px 0 0 0;
+
+    &__images {
+        position:relative;
+    }
     
     &__image {
         width:100%;
         box-sizing: border-box;
         padding:0 59px;
+    }
+
+    &__ring {
+        position:absolute;
     }
 }
 
@@ -20,13 +28,31 @@
         justify-content: space-between;
         row-gap:167px;
 
+        &--not-ios {
+            justify-content: flex-start;
+            align-items: center;
+        }
+
         &__title-wrapper {
             width:57%;
+
+            &--no-ios {
+                width:100%;
+            }
+        }
+
+        &__images {
+            width:34%;
         }
 
         &__image {
-            width:34%;
             padding:0;
+        }
+
+        &__ring {
+            right:-20px;
+            bottom:0px;
+            z-index: -1;
         }
 
         &__multi-icons {

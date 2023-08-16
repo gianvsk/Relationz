@@ -40,6 +40,7 @@
         display: flex;
         justify-content: center;
         margin: 19.11px 0 0 0;
+        gap:5.54px;
     }
 
     &__paragraph {
@@ -49,6 +50,10 @@
     &__secondary-image {
         width: 91px;
         margin: 20.91px 0 25.14px 0;
+    }
+
+    &__dots {
+        display:none;
     }
 }
 
@@ -64,6 +69,11 @@
 @media screen and (min-width: 768px) {
 
     .picture-paragraph {
+        margin: 127.38px 0 0 0;
+
+        &__title {
+            margin-bottom: 136.78px;
+        }
 
         &__title-secondary {
             margin: 86.38px 0 0 0;
@@ -86,6 +96,14 @@
 
         &__secondary-image {
             width: 160px;
+        }
+
+        &__dots {
+            display:block;
+            position:absolute;
+            bottom: -36.48px;
+            right: -6.6px;
+            z-index:-1;
         }
 
     }

@@ -1,14 +1,16 @@
+import { useDevice } from '../../../contexts/DeviceContext';
 import { Text } from '../Text/Text';
 import './style.scss'
 
 type IconTextProps = {
-    text: string;
-    iconLight?: boolean;
-    large?: boolean
+    text: string
+    active?: boolean
     checkBox?: boolean
 }
 
-export const IconText = ({ text, iconLight, large, checkBox }: IconTextProps) => {
+export const IconText = ({ text, active, checkBox }: IconTextProps) => {
+
+    const {ios} = useDevice()
 
     return (
         <div className="icon-text">
@@ -16,9 +18,10 @@ export const IconText = ({ text, iconLight, large, checkBox }: IconTextProps) =>
                 <div className='icon-text__checkbox'>
                     <img className='icon-text__image' src='/images/icons/Vector1.svg' />
                 </div>}
-            {!iconLight && !checkBox && <img className='icon-text__image' src='/images/icons/Vector.svg' />}
-            {iconLight && !checkBox && <img className='icon-text__image' src='/images/icons/Vector1.svg' />}
-            <Text tag='span' modifier={large ? 'span-icon' : 'span-icon-small'}>{text}</Text>
+            {!active && !checkBox && <img className='icon-text__image' src='/images/icons/Vector.svg' />}
+            {active && ios && !checkBox && <img className='icon-text__image' src='/images/icons/Vector1.svg' />}
+            {active && !ios && !checkBox && <img className='icon-text__image' src='/images/icons/Vector2.svg' />}
+            <Text tag='span' modifier='span-icon-small'>{text}</Text>
         </div>
     )
 

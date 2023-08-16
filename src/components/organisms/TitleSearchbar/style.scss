@@ -1,12 +1,17 @@
 .title-searchbar {
     display: flex;
     flex-direction: column;
+    position:relative;
 /*     margin: 138.4px 0 0 0; */
 
     &__titles-container {
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+
+    &__dots {
+        display:none;
     }
 
     &__title {
@@ -43,6 +48,14 @@
             gap: 31px;
         }
 
+        &__dots {
+            display:block;
+            position: absolute;
+            top: -9px;
+            left: -34px;
+            z-index:-1;
+        }
+
         &__title {
             &--small {
                 display: none;
@@ -51,6 +64,21 @@
             &--large {
                 display: block;
             }
+
+            &--no-ios {
+                padding: 0 94px;
+                text-align: center;
+            }
+        }
+
+        &__searchbar {
+            
+            &--no-ios {
+                width:50%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+
         }
 
         &__list {
@@ -59,6 +87,12 @@
             display:flex;
             align-items: center;
             justify-content: space-between;
+
+            &--no-ios {
+                width:45%;
+                margin-left:auto;
+                margin-right:auto;
+            }
         }
     }
 }

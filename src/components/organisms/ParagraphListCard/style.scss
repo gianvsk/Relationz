@@ -1,38 +1,77 @@
 .paragraph-list-card {
-    display:flex;
+    display: flex;
     flex-direction: column;
 
     &__card-container {
-        width:100%;
-        display:flex;
+        width: 100%;
+        position: relative;
+        display: flex;
         flex-direction: column;
-        gap:12px;
+        gap: 12px;
+    }
+
+    &__card {
+        position: relative;
+    }
+
+    &__ring {
+        position: absolute;
+        z-index:-1;
+    }
+
+    &__ring-container {
+        position:relative;
     }
 }
 
 @media screen and (min-width:768px) {
-    
+
     .paragraph-list-card {
-        display:flex;
+        display: flex;
         align-items: flex-end;
         justify-content: space-between;
-        gap:32px;
+        gap: 32px;
         flex-direction: row-reverse;
 
         &__texts {
-            width:50%;
+            width: 50%;
         }
 
         &__card-container {
-            gap:24px;
+            gap: 24px;
 
             &--align-left {
                 flex-direction: row;
             }
 
             &--aligned-to-left {
-                gap:0;
-                width:50%;
+                gap: 0;
+                width: 50%;
+            }
+        }
+
+        &__card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__ring {
+
+            &--ring1 {
+                left: -20%;
+                top: 15%;
+            }
+
+            &--ring2 {
+                left: 46.7%;
+                top: 57.5%;
+            }
+
+            &--ring3 {
+                top:-8%;
+                left:-12%;
             }
         }
 

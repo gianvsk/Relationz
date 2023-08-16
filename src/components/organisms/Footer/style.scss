@@ -1,5 +1,6 @@
 .footer {
     display:flex;
+    position:relative;
     flex-direction: column;
     margin:153.9px 0 0 0;
 
@@ -9,6 +10,11 @@
         justify-content: space-between;
         flex-wrap: wrap;
         row-gap: 50px;
+    }
+
+    &__ring {
+        position:absolute;
+        z-index:-1;
     }
 
     &__ending {
@@ -29,6 +35,11 @@
             display: flex;
             justify-content: space-between;
             row-gap:0;
+        }
+
+        &__ring {
+            top:-5%;
+            left:-5%;
         }
 
         &__ending {
