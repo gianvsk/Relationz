@@ -46,6 +46,7 @@
 
     &__text {
         margin: 0 0 0 10px;
+        width:80%;
 
         &--spacing-off {
             margin: 0;
@@ -61,7 +62,7 @@
 
     .picture-text {
         padding: 24.37px 13px 23.63px 24px;
-        box-shadow: 0px 20px 80px 0px #F2F5FA;
+        box-shadow: 0px 0px 80px 0px #F2F5FA;
         border-radius: 24px;
 
         &--no-padding {

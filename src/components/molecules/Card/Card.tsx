@@ -1,4 +1,3 @@
-import { useDevice } from "../../../contexts/DeviceContext"
 import { Button } from "../../atoms/Button/Button"
 import { IconText } from "../../atoms/IconText/IconText"
 import { Text } from "../../atoms/Text/Text"
@@ -13,11 +12,10 @@ type CardProps = {
         picture: string,
         titleImage: string,
     }[]
+    ios:boolean
 }
 
-export const Card = ({ title, text, source, paragraph }: CardProps) => {
-
-    const {ios} = useDevice()
+export const Card = ({ title, text, source, paragraph, ios }: CardProps) => {
 
     return (
         <div className="card">
@@ -40,7 +38,7 @@ export const Card = ({ title, text, source, paragraph }: CardProps) => {
                 </div>
             </div>
             <div className='card__footer'>
-                <IconText checkBox={true} text='Send on Email as well' />
+                <IconText color='checkbox' text='Send on Email as well' />
                 <Button text='Send' size='button-sm' ios={ios}/>
             </div>
         </div>

@@ -13,19 +13,30 @@ type PictureText = {
 export const PictureText = ({ source, title, text, spacingOff, cardType }: PictureText) => {
 
     return (
-        <div className={clsx('picture-text', { 'picture-text--spacing-off': spacingOff,
-                                               'no-box-shadow': spacingOff,
-                                               'picture-text--no-padding': cardType === 'card' || cardType === 'card-large'})}>
-            <div className={clsx('picture-text__container', { 'picture-text__container--card-large': cardType === 'card-large' })}>
-                {source && <img className={clsx('picture-text__image',
-                    {
-                        'picture-text__image--card': cardType === 'card',
-                        'picture-text__image--card-large': cardType === 'card-large'
-                    })}
-                    src={source} />}
-                <div className={clsx('picture-text__text')}>
+        <div className={clsx('picture-text', {
+            'picture-text--spacing-off': spacingOff,
+            'no-box-shadow': spacingOff,
+            'picture-text--no-padding': cardType === 'card' || cardType === 'card-large'
+        })}>
+            <div className={clsx('picture-text__container', {
+                'picture-text__container--card-large': cardType === 'card-large'
+            })}>
+
+                {source &&
+                    <img
+                        className={clsx('picture-text__image', {
+                            'picture-text__image--card': cardType === 'card',
+                            'picture-text__image--card-large': cardType === 'card-large'
+                        })}
+                        src={source}
+                    />
+                }
+
+                <div className='picture-text__text'>
                     <Text tag='h4' modifier={text ? 'heading4-large' : ''}>{title}</Text>
-                    {text && <Text tag='span' modifier='span-icon'>{text}</Text>}
+                    {text &&
+                        <Text tag='span' modifier='span-icon'>{text}</Text>
+                    }
                 </div>
             </div>
         </div>

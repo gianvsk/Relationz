@@ -4,6 +4,7 @@
 
     &__image {
         margin: 0 4px 0 0;
+        height:8px;
     }
 
     &__text {
@@ -31,12 +32,26 @@
 
     .icon-text {
 
+        &__image {
+            height:10px;
+
+            &--checkbox {
+                height:13px;
+                margin:0;
+            }
+        }
+
         &__text {
             font-size: 16px;
         }
 
         &__text--large {
             font-size: 16px;
+        }
+
+        &__checkbox {
+            height:18px;
+            width:18px;
         }
     }
 

@@ -10,24 +10,12 @@
         display:flex;
         flex-direction: row;
         align-items: center;
-        margin-bottom:20px;
     }
 
     &__icon {
         margin: 0 12px 0 0;
         width:36px;
         height:36px;
-    }
-
-    &__bar-container {
-
-        &--small {
-            display:flex;
-        }
-
-        &--large {
-            display:none;
-        }
     }
 
     &__bar {
@@ -54,16 +42,10 @@
 @media screen and (min-width: 768px) {
     
     .icon-text-bar {
+        gap:16px;
 
-        &__bar-container {
-
-            &--small {
-                display:none;
-            }
-
-            &--large {
-                display:flex;
-            }
+        &__icon-text-container {
+            margin-bottom:0,
         }
 
         &__icon {

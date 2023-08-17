@@ -12,10 +12,10 @@ type ParagraphListCardProps = {
     title: string
     text: string
     textIcon: string[]
-    noSwapColor: boolean
+    ios: boolean
 }
 
-export const ParagraphListCard = ({ /* alignLeft, */ cardType, source, title, text, textIcon, noSwapColor }: ParagraphListCardProps) => {
+export const ParagraphListCard = ({ /* alignLeft, */ cardType, source, title, text, textIcon, ios }: ParagraphListCardProps) => {
 
     return (
         <div className={clsx("paragraph-list-card")}>
@@ -25,12 +25,13 @@ export const ParagraphListCard = ({ /* alignLeft, */ cardType, source, title, te
                 text={text}
                 textIcon={textIcon}
                 cardType={cardType}
-                noSwapIcon={noSwapColor}
+                ios={ios}
             >
                 <div className={clsx('paragraph-list-card__card-container', { 'paragraph-list-card__card-container--align-to-left': cardType === 'card' })}>
                     {!cardType && <>
                         <div className='paragraph-list-card__card'>
-                            <img className='paragraph-list-card__ring paragraph-list-card__ring--ring1' src='/images/icons/Ring3.svg' />
+                            <img className='paragraph-list-card__ring paragraph-list-card__ring--ring1 visible-xs' src='/images/icons/RingXs3.svg' />
+                            <img className='paragraph-list-card__ring paragraph-list-card__ring--ring1 visible-xl' src='/images/icons/Ring3.svg' />
                             <PictureText
                                 source='/images/pictures/User1.jpg'
                                 title='You have a meeting with Surbhi to help her with her portfolio. She got a new pet (Dog named Tiger).'
@@ -48,7 +49,8 @@ export const ParagraphListCard = ({ /* alignLeft, */ cardType, source, title, te
                     }
                     {cardType === 'card-large' &&
                         <div className='paragraph-list-card__card'>
-                            <img className='paragraph-list-card__ring paragraph-list-card__ring--ring3' src='/images/icons/Ring4.1.svg' />
+                            <img className='paragraph-list-card__ring paragraph-list-card__ring--ring3 visible-xs' src='/images/icons/RingXs5.svg' />
+                            <img className='paragraph-list-card__ring paragraph-list-card__ring--ring3 visible-xl' src='/images/icons/Ring4.1.svg' />
                             <Card
                                 title='Send content around anxiety'
                                 text='3 people on the list'
@@ -65,24 +67,34 @@ export const ParagraphListCard = ({ /* alignLeft, */ cardType, source, title, te
                                 {
                                     picture: '/images/pictures/User1.jpg',
                                     titleImage: 'Surbhi Gangwar'
-                                }]}
+                                }
+                                ]}
+                                ios={ios}
                             />
-                            </div>
+                        </div>
                     }
-                            {cardType === 'card' &&
+                    {cardType === 'card' &&
+                        <div className='paragraph-list-card__container'>
+                            <CardDetail
+                                source='/images/pictures/User6.jpg'
+                                details={{
+                                    name:'Archana Deshmukh',
+                                    detail:'Product Design Consultant',
+                                    birthday: '17 April, 1994',
+                                    job: 'Product Design Consultant',
+                                    event:'Went to Amsterdam with parents to visit her brother.'}}
+                            />
+                            {ios ? (
                                 <div className='paragraph-list-card__ring-container'>
-                                    <CardDetail
-                                        source='/images/pictures/User6.jpg'
-                                        name='Archana Deshmukh'
-                                        detail='Product Design Consultant'
-                                        birthday='17 April, 1994'
-                                        job='Product Design Consultant'
-                                        event='Went to Amsterdam with parents to visit her brother.'
-                                    />
-                                    <img className='paragraph-list-card__ring paragraph-list-card__ring--ring2' src='/images/icons/Ring4.svg' />
+                                    <img className='paragraph-list-card__ring paragraph-list-card__ring--ring2 visible-xs' src='/images/icons/RingXs4.svg' />
+                                    <img className='paragraph-list-card__ring paragraph-list-card__ring--ring2-ios visible-xl' src='/images/icons/Ring4.svg' />
                                 </div>
+                            ) :
+                                <img className='paragraph-list-card__ring paragraph-list-card__ring--ring2 visible-xl' src='/images/icons/RingDesktop3.svg' />
                             }
                         </div>
+                    }
+                </div>
             </TextListWrapper>
         </div>
     )

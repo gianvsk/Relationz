@@ -1,4 +1,3 @@
-
 $palette: (
     primary: #1943EF,
     base: #222,
@@ -19,4 +18,27 @@ $palette: (
 @font-face {
     font-family: OpenSansBold;
     src: url('../fonts/OpenSans/OpenSans-Bold.woff');
+}
+
+.visible-xs-flex {
+    display: flex;
+}
+
+
+.visible-xl-flex {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+
+    .visible-xs-flex {
+        display: none;
+    }
+
+
+    .visible-xl-flex {
+        display: flex;
+    }
+
 }

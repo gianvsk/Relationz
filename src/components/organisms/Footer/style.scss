@@ -1,25 +1,49 @@
 .footer {
-    display:flex;
-    position:relative;
+    display: flex;
+    position: relative;
     flex-direction: column;
-    margin:153.9px 0 0 0;
+    margin: 153.9px 0 0 0;
 
     &__body {
-        margin-top:80px;
-        display:flex;
+        margin-top: 80px;
+        display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         row-gap: 50px;
     }
 
+    &__ring-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
     &__ring {
-        position:absolute;
-        z-index:-1;
+        position: absolute;
+        z-index: -1;
+
+        &--ring1 {
+            top: -20px;
+            left: -20px;
+        }
+
+        &--ring2 {
+            top: 46%;
+            left: 92%;
+        }
     }
 
     &__ending {
         margin: 51.87px 0 0 0;
     }
+}
+
+.visible-xs {
+    display: block;
+}
+
+.visible-xl {
+    display: none;
 }
 
 
@@ -34,12 +58,28 @@
             margin: 100.37px 0 0 0;
             display: flex;
             justify-content: space-between;
-            row-gap:0;
+            row-gap: 0;
+            padding-right: 30px;
         }
 
         &__ring {
-            top:-5%;
-            left:-5%;
+
+            &--ring1 {
+                display: block;
+                top: -5%;
+                left: -5%;
+            }
+
+            &--ring2-ios {
+                bottom: 26.5%;
+                left: 104%;
+            }
+
+            &--ring2 {
+                display: block;
+                top: 48%;
+                left: 104.8%;
+            }
         }
 
         &__ending {
@@ -49,6 +89,14 @@
             align-items: center;
             gap: 25px;
         }
+    }
+
+    .visible-xs {
+        display: none;
+    }
+
+    .visible-xl {
+        display: block;
     }
 
 }

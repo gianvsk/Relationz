@@ -8,9 +8,34 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 100%;
+        width:100%;
+
+        &--visible-xs {
+            display:flex;
+        }
+    
+        &--visible-xl {
+            display:none;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .image-multi-icon {
+
+        &__icon-container {
+            justify-content: space-around;
+            width: 100%;
+
+            &--visible-xs {
+                display:none;
+            }
+        
+            &--visible-xl {
+                display:flex;
+            }
+        }
     }
 
-    &__icon-text {
-    }
 }

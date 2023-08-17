@@ -1,22 +1,39 @@
 .icon-bar-image {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:80.5px;
+    gap: 80.5px;
     margin: 168.43px 0 0 0;
 
     &__images {
-        position:relative;
+        position: relative;
     }
-    
+
     &__image {
-        width:100%;
+        width: 100%;
         box-sizing: border-box;
-        padding:0 59px;
+        padding: 0 59px;
     }
 
     &__ring {
-        position:absolute;
+        position: absolute;
+
+        &--small {
+            z-index: -1;
+            top: 84%;
+            left: 70%;
+        }
+
+        &--large {
+            right: 20px;
+            bottom: 0px;
+            z-index: -1;
+        }
+
+        &--xl {
+            top: 100%;
+            left: -6.5%;
+        }
     }
 }
 
@@ -26,7 +43,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        row-gap:167px;
+        margin: 0;
+        row-gap: 167px;
 
         &--not-ios {
             justify-content: flex-start;
@@ -34,29 +52,28 @@
         }
 
         &__title-wrapper {
-            width:57%;
+            width: 57%;
 
             &--no-ios {
-                width:100%;
+                width: 100%;
             }
         }
 
         &__images {
-            width:34%;
+            width: 34%;
+            display: flex;
+            justify-content: flex-end;
         }
 
         &__image {
-            padding:0;
-        }
-
-        &__ring {
-            right:-20px;
-            bottom:0px;
-            z-index: -1;
+            margin: 173px 0 0 0;
+            padding: 0;
+            height: 661px;
+            width: 331px;
         }
 
         &__multi-icons {
-            width:100%;
+            width: 100%;
         }
     }
 

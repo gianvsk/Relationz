@@ -1,10 +1,11 @@
-import { useDevice } from "../../../contexts/DeviceContext"
 import { Button } from "../Button/Button"
 import './style.scss'
 
-export const Searchbar = () => {
+type SearchbarProps = {
+    ios: boolean
+} 
 
-    const {ios} = useDevice()
+export const Searchbar = ({ios} : SearchbarProps) => {
 
     return (
         <div className="searchbar">

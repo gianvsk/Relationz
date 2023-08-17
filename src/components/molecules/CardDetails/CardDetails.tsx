@@ -4,14 +4,18 @@ import './style.scss'
 
 type CardDetailProps = {
     source: string
-    name: string
-    detail: string
-    birthday: string
-    job: string
-    event: string
+    details: {
+        name: string,
+        detail: string,
+        birthday: string,
+        job: string,
+        event: string
+    }
 }
 
-export const CardDetail = ({ source, name, detail, birthday, job, event }: CardDetailProps) => {
+export const CardDetail = ({ source, details }: CardDetailProps) => {
+
+    const {name,detail,birthday,job,event} = details
 
     return (
         <div className="card-detail">

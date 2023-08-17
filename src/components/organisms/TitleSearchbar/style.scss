@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     position:relative;
-/*     margin: 138.4px 0 0 0; */
 
     &__titles-container {
         display: flex;
@@ -11,7 +10,7 @@
     }
 
     &__dots {
-        display:none;
+        display: none;
     }
 
     &__title {
@@ -32,15 +31,44 @@
 
     &__list {
         margin: 21px 0 0 0;
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: space-between;
     }
 }
 
+.visible-xl {
+    display:none;
+}
+
 @media screen and (min-width:768px) {
 
     .title-searchbar {
+        margin: 286px 0 0 0;
+
+        &__ring-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        &__ring {
+            position: absolute;
+
+            &--ring1 {
+                top: -30%;
+                left: 66.5%;
+                width: 58px;
+                height: 58px;
+            }
+
+            &--ring2 {
+                top: 95%;
+                left: 104%;
+                width: 88px;
+                height: 88px;
+            }
+        }
 
         &__titles-container {
             display: flex;
@@ -49,11 +77,11 @@
         }
 
         &__dots {
-            display:block;
+            display: block;
             position: absolute;
             top: -9px;
             left: -34px;
-            z-index:-1;
+            z-index: -1;
         }
 
         &__title {
@@ -72,27 +100,31 @@
         }
 
         &__searchbar {
-            
+
             &--no-ios {
-                width:50%;
-                margin-left:auto;
-                margin-right:auto;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
             }
 
         }
 
         &__list {
-            width:82%;
+            width: 82%;
             margin: 28.73px 0 0 0;
-            display:flex;
+            display: flex;
             align-items: center;
             justify-content: space-between;
 
             &--no-ios {
-                width:45%;
-                margin-left:auto;
-                margin-right:auto;
+                width: 45%;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
+    }
+
+    .visible-xl {
+        display:block;
     }
 }

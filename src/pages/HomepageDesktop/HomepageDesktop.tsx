@@ -3,14 +3,14 @@ import { ParagraphListCard } from "../../components/organisms/ParagraphListCard/
 import { PictureParagraph } from "../../components/organisms/PictureParagraph/PictureParagraph"
 import './style.scss'
 
-type HomepageProps = {
+type HomepageDesktop = {
     ios: boolean
 }
 
-export const Homepage = ({ios} : HomepageProps) => {
+export const HomepageDesktop = ({ios}: HomepageDesktop) => {
 
     return (
-        <div className="homepage">
+        <div className="homepage-desktop">
             <IconBarImage ios={ios}/>
             <ParagraphListCard
                 source={['/images/icons/GreenBell.svg', '/images/icons/BlueBell.svg']}
