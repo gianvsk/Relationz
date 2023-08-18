@@ -36,6 +36,11 @@
      color: map-get($palette, text);
      font-weight: 400;
 
+     &--bold {
+      font-weight: 700;
+      color: map-get($palette, base);
+     }
+
      &--large {
         font-size:15px;
         font-weight: 400;
@@ -119,6 +124,30 @@
        font-size: 13px;
        font-weight: 700;
     }
+
+    &--h4like-base {
+      font-size: 13px;
+      color: map-get($palette, base);
+      font-weight: 700;
+    }
+
+    &--h4like-text {
+      font-size: 13px;
+      color: map-get($palette, text);
+      font-weight: 400;
+    }
+
+    &--micro {
+      font-size: 4.1px;
+      color:map-get($palette, information);
+      font-weight: 400;
+    }
+
+    &--micro-base {
+      font-size: 4.1px;
+      color:map-get($palette, base);
+      font-weight: 400;
+    }
  }
 
  .link {
@@ -128,6 +157,12 @@
 
     &--small {
         font-size:14px;
+    }
+
+    &--icon {
+      font-size: 13px;
+      color: map-get($palette, icon);
+      font-weight: 700;
     }
  }
 
@@ -221,6 +256,22 @@
         &--text {
            font-size: 16px;
         }
+
+        &--h4like-base {
+         font-size: 16px;
+       }
+
+       &--h4like-text {
+         font-size: 16px;
+       }
+
+       &--micro {
+         font-size: 13.706px;
+       }
+
+       &--micro-base {
+         font-size: 13.706px;
+       }
      }
 
      .link {
@@ -230,6 +281,12 @@
         &--small {
             font-size:16px;
         }
+
+        &--icon {
+         font-size: 16px;
+         color: map-get($palette, icon);
+         font-weight: 700;
+       }
      }
 
  }

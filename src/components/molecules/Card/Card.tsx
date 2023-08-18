@@ -1,5 +1,5 @@
 import { Button } from "../../atoms/Button/Button"
-import { IconText } from "../../atoms/IconText/IconText"
+import { CheckText } from "../../atoms/CheckText/CheckText"
 import { Text } from "../../atoms/Text/Text"
 import { PictureText } from "../PictureText/PictureText"
 import './style.scss'
@@ -21,7 +21,7 @@ export const Card = ({ title, text, source, paragraph, ios }: CardProps) => {
         <div className="card">
             <div className='card__header'>
                 <Text tag='h4' modifier='heading4-large'>{title}</Text>
-                <Text tag='p' modifier='span-icon-small'>{text}</Text>
+                <Text tag='p' modifier='span-icon-small'>{source.length + ' ' + text}</Text>
             </div>
             <div className='card__spacer'></div>
             <div className='card__body'>
@@ -29,7 +29,9 @@ export const Card = ({ title, text, source, paragraph, ios }: CardProps) => {
                 <div className='card__images-container'>
                     {source.map(el => (
                         <div className='card__user'>
-                            <PictureText source={el.picture} title={el.titleImage} spacingOff={true} cardType='card' />
+                            <PictureText source={el.picture} spacingOff={true} cardType='card'>
+                                <Text tag='h4'>{el.titleImage}</Text>
+                            </PictureText>
                         </div>
                     ))}
                     <div className='card__paragraph'>
@@ -38,7 +40,7 @@ export const Card = ({ title, text, source, paragraph, ios }: CardProps) => {
                 </div>
             </div>
             <div className='card__footer'>
-                <IconText color='checkbox' text='Send on Email as well' />
+                <CheckText color='checkbox' text='Send on Email as well' />
                 <Button text='Send' size='button-sm' ios={ios}/>
             </div>
         </div>

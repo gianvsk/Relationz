@@ -11,12 +11,9 @@ type PictureParagraphProps = {
 export const PictureParagraph = ({ title, author, paragraph, ios }: PictureParagraphProps) => {
 
     return (
-        <div className="picture-paragraph">
+        <section className="picture-paragraph">
 
-            {!ios &&
-                <img className='picture-paragraph__ring visible-xl' src='/images/icons/RingDesktop4.svg' />
-            }
-
+            <img className='picture-paragraph__ring visible-xl' src='/images/icons/RingDesktop4.svg' />
             <div className='picture-paragraph__title'>
                 <Text tag='h2'>{title}</Text>
             </div>
@@ -67,7 +64,7 @@ export const PictureParagraph = ({ title, author, paragraph, ios }: PictureParag
                 }
 
             </div>
-        </div>
+        </section>
     )
 
 }

@@ -15,25 +15,28 @@ export const IconTextBar = ({ source, text, emptyBar, ios }: IconTextBar) => {
 
         <div className="icon-text-bar">
             <div className='icon-text-bar__icon-text-container'>
-                {ios ?
-                    <img className='icon-text-bar__icon' src={source} />
-                    :
-                    <img className='icon-text-bar__icon' src={source} />
-                }
+                <img className='icon-text-bar__icon' src={source} />
                 <Text tag='span' modifier='span-large'>{text}</Text>
             </div>
+
             <div className='icon-text-bar__bar-container icon-text-bar__bar-container visible-xs'>
-                {!emptyBar ?
-                    <img className='icon-text-bar__bar icon-text-bar__bar--half' src='/images/icons/Bar.svg' />
-                    :
-                    <div className={clsx('icon-text-bar__bar icon-text-bar__bar--empty')} />
-                }
+                <img className={clsx(
+                    'icon-text-bar__bar icon-text-bar__bar--half', {
+                    'icon-text-bar__bar icon-text-bar__bar--empty': emptyBar
+                })}
+                    src={!emptyBar ? '/images/icons/Bar.svg' : ''} />
             </div>
+
             <div className='icon-text-bar__bar-container icon-text-bar__bar-container visible-xl'>
-                {!emptyBar && ios && <img className='icon-text-bar__bar icon-text-bar__bar--half' src='/images/icons/BlueBarXL.jpg' />}
-                {!emptyBar && !ios && <img className='icon-text-bar__bar icon-text-bar__bar--half' src='/images/icons/GreenBarXL.jpg' />}
-                {emptyBar && <div className={clsx('icon-text-bar__bar icon-text-bar__bar--empty',
-                    { 'icon-text-bar__bar--no-ios': !ios })} />}
+                {!emptyBar &&
+                    <img className='icon-text-bar__bar icon-text-bar__bar--half'
+                        src={ios ? '/images/icons/BlueBarXL.jpg' : '/images/icons/GreenBarXL.jpg'} />}
+
+                {emptyBar &&
+                    <div className={clsx(
+                        'icon-text-bar__bar icon-text-bar__bar--empty', {
+                        'icon-text-bar__bar--no-ios': !ios
+                    })} />}
             </div>
         </div>
 

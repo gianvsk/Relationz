@@ -5,17 +5,18 @@ import './style.scss'
 type TextProps = {
     tag: 'a' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p'
     modifier?: 'span-small' | 'span-large' | 'span-icon' | 'span-account' | 'span-text' | 'span-icon-small' | 'paragraph-text' |
-                'logo' | 'heading4-large' | 'span-extra-small' | 'paragraph-small' | 'paragraph-large' | 'heading5-bold' | 
-                'heading4-extra-large' | 'heading4-extra-large-bold' | 'link-small' | 'heading2-small' | ''
+    'logo' | 'heading4-large' | 'span-extra-small' | 'paragraph-small' | 'paragraph-large' | 'heading5-bold' |
+    'heading4-extra-large' | 'heading4-extra-large-bold' | 'heading4-bold' | 'span-h4like-base' | 'span-h4like-text'
+    | 'span-micro' | 'span-micro-base' | 'link-icon' | 'link-small' | 'heading2-small' | ''
     children: React.ReactNode
 }
 
-export const Text = ({tag, modifier, children} : TextProps) => {
+export const Text = ({ tag, modifier, children }: TextProps) => {
 
     const Tag = tag
 
     const textClass = useMemo(() => {
-        switch(tag) {
+        switch (tag) {
             case 'a':
                 return 'link'
             case 'h1':
@@ -26,7 +27,7 @@ export const Text = ({tag, modifier, children} : TextProps) => {
                 return 'heading3'
             case 'h4':
                 return 'heading4'
-            case 'h5': 
+            case 'h5':
                 return 'heading5'
             case 'h6':
                 return 'heading6'
@@ -40,7 +41,7 @@ export const Text = ({tag, modifier, children} : TextProps) => {
     }, [tag])
 
     const textModifier = useMemo(() => {
-        switch(modifier) {
+        switch (modifier) {
             case 'span-small':
                 return 'span span--small'
             case 'span-large':
@@ -71,6 +72,18 @@ export const Text = ({tag, modifier, children} : TextProps) => {
                 return 'heading4 heading4--extra-large'
             case 'heading4-extra-large-bold':
                 return 'heading4 heading4--extra-large-bold'
+            case 'heading4-bold':
+                return 'heading4 heading4--bold'
+            case 'span-h4like-base':
+                return 'span span--h4like-base'
+            case 'span-h4like-text':
+                return 'span span--h4like-text'
+            case 'span-micro':
+                return 'span span--micro'
+            case 'span-micro-base':
+                return 'span span--micro-base'
+            case 'link-icon':
+                return 'link link--icon'
             case 'heading5-bold':
                 return 'heading5 heading5--bold'
             case 'link-small':

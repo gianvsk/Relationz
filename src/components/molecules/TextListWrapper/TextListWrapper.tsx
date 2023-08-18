@@ -1,5 +1,5 @@
 import './style.scss'
-import { IconText } from "../../atoms/IconText/IconText"
+import { CheckText } from "../../atoms/CheckText/CheckText"
 import { TextParagraph } from "../../atoms/TextParagraph/TextParagraph"
 import clsx from 'clsx'
 
@@ -11,9 +11,10 @@ type TextListWrapperProps = {
     cardType?: string
     children: React.ReactNode
     ios: boolean
+    swapColor: boolean
 }
 
-export const TextListWrapper = ({ source, title, text, textIcon, children, cardType, ios }: TextListWrapperProps) => {
+export const TextListWrapper = ({ source, title, text, textIcon, children, cardType, ios, swapColor }: TextListWrapperProps) => {
 
     return (
 
@@ -31,7 +32,7 @@ export const TextListWrapper = ({ source, title, text, textIcon, children, cardT
                     'text-list-wrapper__icon--spaced': cardType === 'card-large',
                     'text-list-wrapper__icon--start': cardType === 'card'
                 })}
-                src={ios ? source[0] : source[1]} />
+                src={ios || swapColor ? source[0] : source[1]} />
 
             <div className={clsx('text-list-wrapper__container',
                 {
@@ -45,10 +46,10 @@ export const TextListWrapper = ({ source, title, text, textIcon, children, cardT
                         {textIcon.map((el, index) =>
                             <>
                                 <li className='text-list-wrapper__list-item visible-xs'>
-                                    <IconText key={index} text={el} color='green' />
+                                    <CheckText key={index} text={el} color='green' />
                                 </li>
                                 <li className='text-list-wrapper__list-item visible-xl'>
-                                    <IconText key={index} text={el} color={ios ? 'green' : 'blue'} />
+                                    <CheckText key={index} text={el} color={ios ? 'green' : 'blue'} />
                                 </li>
                             </>
                         )}

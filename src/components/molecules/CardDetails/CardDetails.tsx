@@ -15,11 +15,14 @@ type CardDetailProps = {
 
 export const CardDetail = ({ source, details }: CardDetailProps) => {
 
-    const {name,detail,birthday,job,event} = details
+    const { name, detail, birthday, job, event } = details
 
     return (
         <div className="card-detail">
-            <PictureText source={source} title={name} text={detail} cardType='card-large' />
+            <PictureText source={source} cardType='card-large' >
+                <Text tag='h4' modifier='heading4-large'>{name}</Text>
+                <Text tag='span' modifier='span-icon'>{detail}</Text>
+            </PictureText>
             <div className='card-detail__text-spacer'>
                 <div className='card-detail__span'>
                     <Text tag='span' modifier='span-extra-small'>More information</Text>

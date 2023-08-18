@@ -9,7 +9,7 @@ export const Navbar = () => {
 
     return (
 
-        <div className="navbar">
+        <nav className="navbar">
             <Text tag='h1' modifier='logo'>Relationz</Text>
             <a className='navbar__burger'><img src='/images/icons/BurgerMenu.svg' /></a>
             <img className='navbar__ring' src='/images/icons/Ring1.svg'  />
@@ -24,7 +24,7 @@ export const Navbar = () => {
             <div className='navbar__button'>
                     <Button text='Try it for free' size={ios ? 'button-lg-empty-blue' : 'button-lg-empty-green'}/>
                 </div>
-        </div>
+        </nav>
 
     )
 
