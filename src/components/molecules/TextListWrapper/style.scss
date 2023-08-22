@@ -46,9 +46,32 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
+    
+    .text-list-wrapper {
+        align-items: center;
+
+        &__icon--spaced {
+            margin:0;
+        }
+
+        &__icon {
+            width: 75px;
+            height: 75px;
+/*             left: calc(50% + 32px); */
+    
+            &--start {
+                left:0;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 992px) {
 
     .text-list-wrapper {
+        align-items: flex-start;
 
         &__container {
             display: flex;

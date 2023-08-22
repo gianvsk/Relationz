@@ -1,4 +1,4 @@
-import { useDevice } from "../../../contexts/DeviceContext"
+import { useLocation } from "react-router-dom"
 import { List } from "../../atoms/List/List"
 import { Text } from "../../atoms/Text/Text"
 import { TextParagraph } from "../../atoms/TextParagraph/TextParagraph"
@@ -6,7 +6,9 @@ import './style.scss'
 
 export const Footer = () => {
 
-    const { ios } = useDevice()
+    const location = useLocation()
+
+    const ios = location.pathname === '/' ? true : false
 
     return (
         <footer className="footer">

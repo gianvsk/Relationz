@@ -1,11 +1,13 @@
-import { useDevice } from "../../../contexts/DeviceContext"
+import { useLocation } from "react-router-dom"
 import { Button } from "../../atoms/Button/Button"
 import { Text } from "../../atoms/Text/Text"
 import './style.scss'
 
 export const Navbar = () => {
 
-    const {ios} = useDevice()
+    const location = useLocation()
+
+    const ios = location.pathname === '/' ? true : false
 
     return (
 

@@ -48,7 +48,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin: 163px 0 0 0;
+        margin: 286px 0 0 0;
 
         &--not-ios {
             justify-content: flex-start;
@@ -112,9 +112,9 @@
         justify-content: space-between;
         margin: 0;
         row-gap: 167px;
-        margin: 173px 0 0 0;
 
-        &--not-ios {
+        &--desktop {
+            margin:286px 0 0 0;
             justify-content: flex-start;
             align-items: center;
         }
@@ -153,6 +153,11 @@
 
             &--large-2 {
                 top: -3%;
+                left: 35%;
+            }
+
+            &--large-2-desktop {
+                top: 0%;
                 left: 35%;
             }
 

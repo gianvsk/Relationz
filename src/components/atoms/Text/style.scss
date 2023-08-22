@@ -176,6 +176,12 @@
       color: map-get($palette, icon);
       font-weight: 700;
     }
+
+    &--primary {
+      font-size: 13px;
+      color: map-get($palette, primary);
+      font-weight: 700;
+    }
  }
 
  .color-icon {
@@ -301,6 +307,12 @@
         &--icon {
          font-size: 16px;
          color: map-get($palette, icon);
+         font-weight: 700;
+       }
+
+       &--primary {
+         font-size: 16px;
+         color: map-get($palette, primary);
          font-weight: 700;
        }
      }

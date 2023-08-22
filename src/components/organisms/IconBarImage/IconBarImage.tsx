@@ -9,7 +9,7 @@ type IconBarImageProps = {
 export const IconBarImage = ({ ios }: IconBarImageProps) => {
 
     return (
-        <section className={clsx("icon-bar-image", { 'icon-bar-image--no-ios': !ios })}>
+        <section className={clsx("icon-bar-image", {'icon-bar-image--desktop': !ios })}>
             <div className={clsx('icon-bar-image__title-wrapper', { 'icon-bar-image__title-wrapper--no-ios': !ios })}>
                 <TitleSearchbar ios={ios}
                     title='Take your relationships to the next level'
@@ -29,8 +29,8 @@ export const IconBarImage = ({ ios }: IconBarImageProps) => {
             </div>
             <div className='visible-xl'>
                 <img className='icon-bar-image__ring icon-bar-image__ring--xl' src='/images/icons/RingOrangeLarge.svg' />
-                <img className='icon-bar-image__ring icon-bar-image__ring--large-1' src='/images/icons/Ring1.1.svg' />
-                <img className='icon-bar-image__ring icon-bar-image__ring--large-2' src='/images/icons/Ring1.1.svg' />
+                {ios && <img className='icon-bar-image__ring icon-bar-image__ring--large-1' src='/images/icons/Ring1.1.svg' />}
+                <img className={clsx('icon-bar-image__ring icon-bar-image__ring--large-2', {'icon-bar-image__ring--large-2-desktop': !ios})} src={ ios ? '/images/icons/Ring1.1.svg' : '/images/icons/RingYellowNavbarXl.svg'} />
             </div>
 
             {ios ? (

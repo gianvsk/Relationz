@@ -43,8 +43,8 @@ export const HomepageDesktop = ({ios}: HomepageDesktop) => {
                         <Text tag='span' modifier='span-h4like-text'> hasn’t responded to your Email from 22 Jan, 2020</Text>
                     </Text>
                     <Text tag='h4' modifier='heading4-bold'>Want to check up on her?
-                        <Text tag='a' modifier='link-icon'> Follow up</Text>
-                        <img className='small-arrow' src='/images/icons/SmallArrowGreen.svg' />
+                        <Text tag='a' modifier='link-primary'> Follow up</Text>
+                        <img className='small-arrow' src={ios ? '/images/icons/SmallArrowGreen.svg' : '/images/icons/SmallArrowBlue.svg'} />
                     </Text>
                 </PictureText>
             </ParagraphListCard>

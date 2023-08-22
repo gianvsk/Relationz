@@ -33,9 +33,18 @@
     }
 }
 
+@media screen and (min-width: 576px) {
+    
+    .check-text {
+        justify-content: center;
+    }
+
+}
+
 @media screen and (min-width:768px) {
 
     .check-text {
+        justify-content: flex-start;
 
         &__image {
             height: 10px;

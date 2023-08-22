@@ -8,7 +8,7 @@ type HeroProps = {
 export const Hero = ({ ios }: HeroProps) => {
 
     return (
-        <div className='hero'>
+        <section className='hero'>
             <div className="hero__head">
                 <MultiIcon ios={ios} />
             </div>
@@ -21,7 +21,7 @@ export const Hero = ({ ios }: HeroProps) => {
                 }
                 <img className='hero__dots' src='/images/icons/DotsLarge.svg' />
             </div>
-        </div>
+        </section>
     )
 
 }

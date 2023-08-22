@@ -29,7 +29,7 @@ export const Card = ({ title, text, source, paragraph, ios }: CardProps) => {
                 <div className='card__images-container'>
                     {source.map(el => (
                         <div className='card__user'>
-                            <PictureText source={el.picture} spacingOff={true} cardType='card'>
+                            <PictureText source={el.picture} cardType='card'>
                                 <Text tag='h4'>{el.titleImage}</Text>
                             </PictureText>
                         </div>

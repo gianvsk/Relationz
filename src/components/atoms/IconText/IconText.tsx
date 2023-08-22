@@ -2,7 +2,6 @@ import { Text } from '../Text/Text'
 import './style.scss'
 
 type IconTextProps = {
-    /* active?: boolean */
     source: string
     text: string
 }
