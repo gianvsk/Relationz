@@ -9,7 +9,7 @@ export const Footer = () => {
     const { ios } = useDevice()
 
     return (
-        <div className="footer">
+        <footer className="footer">
             <img className='footer__ring footer__ring--ring2 visible-xs' src='/images/icons/RingXs7.svg' />
             {ios ?
                 <img className='footer__ring footer__ring--ring2 visible-xl' src='/images/icons/Ring6.svg' />
@@ -30,11 +30,11 @@ export const Footer = () => {
             </div>
             <div className='footer__ending'>
                 <Text tag='h4' modifier='heading4-extra-large-bold'>Relationz</Text>
-                <Text tag='p' modifier='paragraph-text'>Copyright © 2010 - 2019 Relationz Ltd. All rights reserved.</Text>
+                <Text tag='p' modifier='paragraph-text'>Copyright © 2010 - 2019 Relationz Ltd. <br/> All rights reserved.</Text>
             </div>
             <img className='footer__ring footer__ring--ring1 visible-xs' src='/images/icons/RingXs6.svg' />
             <img className='footer__ring footer__ring--ring1 visible-xl' src='/images/icons/Ring5.svg' />
-        </div>
+        </footer>
     )
 
 }

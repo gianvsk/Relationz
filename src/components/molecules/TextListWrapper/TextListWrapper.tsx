@@ -8,7 +8,7 @@ type TextListWrapperProps = {
     title: string
     text: string
     textIcon: string[]
-    cardType?: string
+    cardType?: 'card' | 'card-large'
     children: React.ReactNode
     ios: boolean
     swapColor: boolean
@@ -22,8 +22,8 @@ export const TextListWrapper = ({ source, title, text, textIcon, children, cardT
 
             <img
                 className={clsx('text-list-wrapper__icon', 'visible-xs', {
-                    'text-list-wrapper__icon--spaced': cardType === 'card-large',
-                    'text-list-wrapper__icon--start': cardType === 'card'
+                    'text-list-wrapper__icon--spaced': cardType === 'card',
+                    'text-list-wrapper__icon--start': cardType === 'card-large'
                 })}
                 src={source[0]} />
 

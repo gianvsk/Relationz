@@ -7,7 +7,7 @@ type TextProps = {
     modifier?: 'span-small' | 'span-large' | 'span-icon' | 'span-account' | 'span-text' | 'span-icon-small' | 'paragraph-text' |
     'logo' | 'heading4-large' | 'span-extra-small' | 'paragraph-small' | 'paragraph-large' | 'heading5-bold' |
     'heading4-extra-large' | 'heading4-extra-large-bold' | 'heading4-bold' | 'span-h4like-base' | 'span-h4like-text'
-    | 'span-micro' | 'span-micro-base' | 'link-icon' | 'link-small' | 'heading2-small' | ''
+    | 'span-micro' | 'span-micro-base' | 'span-micro-large' | 'span-micro-icon' | 'link-icon' | 'link-small' | 'heading2-small' | ''
     children: React.ReactNode
 }
 
@@ -82,12 +82,16 @@ export const Text = ({ tag, modifier, children }: TextProps) => {
                 return 'span span--micro'
             case 'span-micro-base':
                 return 'span span--micro-base'
+            case 'span-micro-large':
+                return 'span span--micro-large'
             case 'link-icon':
-                return 'link link--icon'
+                return 'link--icon'
             case 'heading5-bold':
                 return 'heading5 heading5--bold'
             case 'link-small':
                 return 'link link--small'
+            case 'span-micro-icon':
+                return 'span span--micro-icon'
             case '':
                 return ''
             default:

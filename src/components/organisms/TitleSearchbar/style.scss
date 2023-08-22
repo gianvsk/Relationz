@@ -31,6 +31,7 @@
 
     &__list {
         margin: 21px 0 0 0;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -44,7 +45,6 @@
 @media screen and (min-width:768px) {
 
     .title-searchbar {
-        margin: 286px 0 0 0;
 
         &__ring-container {
             position: relative;

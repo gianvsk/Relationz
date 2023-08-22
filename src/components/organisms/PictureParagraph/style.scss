@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position:relative;
+    position: relative;
 
     &__body {
         position: relative;
@@ -42,7 +42,7 @@
     &__icons-container {
         justify-content: center;
         margin: 19.11px 0 0 0;
-        gap:5.54px;
+        gap: 5.54px;
     }
 
     &__paragraph {
@@ -55,14 +55,95 @@
     }
 
     &__dots {
-        position:absolute;
-        width:52px;
-        height:48px;
+        position: absolute;
+        width: 52px;
+        height: 48px;
         bottom: -36.48px;
         right: -15.6px;
-        z-index:-1;
+        z-index: -1;
+    }
+
+    &__pictures-rings {
+        position: relative;
+    }
+
+    &__ring {
+        position: absolute;
+
+        &--small {
+            top: 13.45%;
+            left: 94.15%;
+        }
+
+        &--medium {
+            top: 98.45%;
+            left: 0.2%;
+        }
+    }
+
+    &__user {
+        position: absolute;
+        object-fit: cover;
+        z-index: 1;
+
+        &--image1 {
+            height: 24px;
+            width: 24px;
+            border-radius: 66.6px;
+            box-shadow: 0px 3.9281768798828125px 15.71270751953125px 0px #F2F5FA;
+            top: 96.0%;
+            left: 70%;
+        }
+
+        &--image2 {
+            height: 26px;
+            width: 26px;
+            border-radius: 38.693px;
+            box-shadow: 0px 2.2821924686431885px 9.128769874572754px 0px #F2F5FA;
+            left: 2.5%;
+            top: 100%;
+        }
+
+        &--image3 {
+            width: 35px;
+            height: 35px;
+            border-radius: 48.563px;
+            box-shadow: 0px 2.864295721054077px 11.457182884216309px 0px #F2F5FA;
+            top: 55%;
+            left: -9%;
+            z-index: 0;
+        }
+
+        &--image4 {
+            width: 37px;
+            height: 37px;
+            border-radius: 66.6px;
+            box-shadow: 0px 3.9281768798828125px 15.71270751953125px 0px #F2F5FA;
+            top: 12%;
+            left: 2.5%;
+        }
+
+        &--image5 {
+            width: 27.5px;
+            height: 27.5px;
+            border-radius: 38.156px;
+            box-shadow: 0px 2.2505178451538086px 9.002071380615234px 0px #F2F5FA;
+            top: 14%;
+            left: 95%;
+        }
+
+        &--image6 {
+            width: 42px;
+            height: 42px;
+            border-radius: 62.16px;
+            box-shadow: 0px 3.6662986278533936px 14.665194511413574px 0px #F2F5FA;
+            top: 106%;
+            left: 98%;
+        }
     }
 }
+
+
 
 .scroll-container {
     justify-content: center;
@@ -78,9 +159,9 @@
         margin: 127.38px 0 0 0;
 
         &__ring {
-            position:absolute;
-            top:20%;
-            left:0;
+            position: absolute;
+            top: 20%;
+            left: 0;
         }
 
         &__title {
@@ -92,7 +173,7 @@
         }
 
         &__body {
-            width:55%;
+            width: 55%;
             padding: 0 42px;
         }
 
@@ -102,8 +183,7 @@
             top: -62.5px;
             border-radius: 111px;
             border: 8px solid #FFF;
-            background: url(<path-to-image>), lightgray -20.894px 2.992px / 136.405% 199.617% no-repeat, #FFF;
-            box-shadow: 0px 6.546961307525635px 26.18784523010254px 0px #F2F5FA, 0px 6.546961307525635px 26.18784523010254px 0px #F2F5FA, 0px 6.546961307525635px 26.18784523010254px 0px #F2F5FA;
+            box-shadow: 0px 6.546961307525635px 26.18784523010254px 0px #F2F5FA;
         }
 
         &__secondary-image {
@@ -111,11 +191,86 @@
         }
 
         &__dots {
-            width:67.6px;
+            width: 67.6px;
             height: 63.1px;
             bottom: -36.48px;
             right: -13.6px;
-            z-index:-1;
+            z-index: -1;
+        }
+
+        &__ring {
+            position: absolute;
+
+            &--small {
+                top: 0%;
+                left: 109.8%;
+            }
+
+            &--medium {
+                top: 19.39%;
+                left: 3.9%;
+            }
+        }
+
+        &__user {
+            position: absolute;
+            object-fit: cover;
+            z-index: 1;
+
+            &--image1 {
+                width: 40px;
+                height: 40px;
+                border-radius: 66.6px;
+                box-shadow: 0px 3.9281768798828125px 15.71270751953125px 0px #F2F5FA;
+                top: 9%;
+                left: -6%;
+            }
+
+            &--image2 {
+                height: 75px;
+                width: 75px;
+                border-radius: 38.693px;
+                box-shadow: 0px 2.2821924686431885px 9.128769874572754px 0px #F2F5FA;
+                left: 5.7%;
+                top: 22%;
+            }
+
+            &--image3 {
+                width: 80px;
+                height: 80px;
+                border-radius: 48.563px;
+                box-shadow: 0px 2.864295721054077px 11.457182884216309px 0px #F2F5FA;
+                top: 72%;
+                left: -15.2%;
+                z-index: 0;
+            }
+
+            &--image4 {
+                width: 60px;
+                height: 60px;
+                border-radius: 66.6px;
+                box-shadow: 0px 3.9281768798828125px 15.71270751953125px 0px #F2F5FA;
+                top: 16%;
+                left: 84.5%;
+            }
+
+            &--image5 {
+                width: 80px;
+                height: 80px;
+                border-radius: 38.156px;
+                box-shadow: 0px 2.2505178451538086px 9.002071380615234px 0px #F2F5FA;
+                top: 1.1%;
+                left: 110.7%;
+            }
+
+            &--image6 {
+                width: 75px;
+                height: 75px;
+                border-radius: 62.16px;
+                box-shadow: 0px 3.6662986278533936px 14.665194511413574px 0px #F2F5FA;
+                top: 65%;
+                left: 99%;
+            }
         }
 
     }
@@ -123,7 +278,7 @@
     .scroll-container {
 
         &__scroll {
-            width:85px;
+            width: 85px;
             margin: 48.38px 0 0 0;
         }
 

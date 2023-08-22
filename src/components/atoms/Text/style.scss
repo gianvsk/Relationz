@@ -148,6 +148,18 @@
       color:map-get($palette, base);
       font-weight: 400;
     }
+
+    &--micro-large {
+      font-size: 4.685px;
+      font-weight: 400;
+      color: map-get($palette, base);
+    }
+
+    &--micro-icon {
+      font-size: 4.1px;
+      color:map-get($palette, icon);
+      font-weight: 400;
+    }
  }
 
  .link {
@@ -164,6 +176,10 @@
       color: map-get($palette, icon);
       font-weight: 700;
     }
+ }
+
+ .color-icon {
+   color:map-get($palette, icon);
  }
 
  @media screen and (min-width: 768px) {

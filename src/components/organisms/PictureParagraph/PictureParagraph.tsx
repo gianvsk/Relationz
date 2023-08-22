@@ -13,7 +13,28 @@ export const PictureParagraph = ({ title, author, paragraph, ios }: PictureParag
     return (
         <section className="picture-paragraph">
 
-            <img className='picture-paragraph__ring visible-xl' src='/images/icons/RingDesktop4.svg' />
+            <div className="visible-xs">
+                <img className='picture-paragraph__user picture-paragraph__user--image1' src='/images/pictures/UserParagraph1.jpg' />
+                <img className='picture-paragraph__user picture-paragraph__user--image2' src='/images/pictures/UserParagraph2.jpg' />
+                <img className='picture-paragraph__ring picture-paragraph__ring--medium'  src='/images/icons/RingYellowSmallXs.svg'/>
+                <img className='picture-paragraph__user picture-paragraph__user--image3' src='/images/pictures/UserParagraph3.jpg' />
+                <img className='picture-paragraph__user picture-paragraph__user--image4' src='/images/pictures/UserParagraph4.jpg' />
+                <img className='picture-paragraph__user picture-paragraph__user--image5' src='/images/pictures/UserParagraph5.jpg' />
+                <img className='picture-paragraph__ring picture-paragraph__ring--small'  src='/images/icons/RingBlueSmallXs.svg'/>
+                <img className='picture-paragraph__user picture-paragraph__user--image6' src='/images/pictures/UserParagraph6.jpg' />
+            </div>
+
+            <div className="visible-xl">
+                <img className='picture-paragraph__user picture-paragraph__user--image1' src='/images/pictures/UserParagraph1.jpg' />
+                <img className='picture-paragraph__user picture-paragraph__user--image2' src='/images/pictures/UserParagraph2.jpg' />
+                <img className='picture-paragraph__ring picture-paragraph__ring--medium'  src='/images/icons/RingDesktop4.svg'/>
+                <img className='picture-paragraph__user picture-paragraph__user--image3' src='/images/pictures/UserParagraph3.jpg' />
+                <img className='picture-paragraph__user picture-paragraph__user--image4' src='/images/pictures/UserParagraph4.jpg' />
+                <img className='picture-paragraph__user picture-paragraph__user--image5' src='/images/pictures/UserParagraph5.jpg' />
+                <img className='picture-paragraph__ring picture-paragraph__ring--small'  src='/images/icons/RingBlueMediumXl.svg'/>
+                <img className='picture-paragraph__user picture-paragraph__user--image6' src='/images/pictures/UserParagraph6.jpg' />
+            </div>
+
             <div className='picture-paragraph__title'>
                 <Text tag='h2'>{title}</Text>
             </div>

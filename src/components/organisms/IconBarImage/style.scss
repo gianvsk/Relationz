@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 80.5px;
     margin: 168.43px 0 0 0;
 
     &__images {
         position: relative;
+        max-width: 400px;
+        min-width:331px;
     }
 
     &__image {
@@ -17,34 +20,99 @@
 
     &__ring {
         position: absolute;
+        z-index:-1;
 
-        &--small {
-            z-index: -1;
-            top: 84%;
-            left: 70%;
+        &--small-1 {
+            top: -2.2%;
+            left: 30%;
         }
 
-        &--large {
-            right: 5%;
-            bottom: 0px;
+        &--small-2 {
             z-index: -1;
+            top: 97%;
+            left: 68.5%;
         }
 
-        &--xl {
-            top: 100%;
-            left: -6.5%;
+        &--small-3 {
+            z-index: -1;
+            top: 102%;
+            left: 0;
         }
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
 
     .icon-bar-image {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 163px 0 0 0;
+
+        &--not-ios {
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__title-wrapper {
+            width: 100%;
+
+            &--no-ios {
+                width: 100%;
+            }
+        }
+
+        &__images {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            max-width: 380px;
+        }
+
+        &__image {
+            margin: 50px 0 0 0;
+            padding: 0;
+            height: 661px;
+            width: 100%;
+        }
+
+        &__multi-icons {
+            width: 100%;
+        }
+
+        &__ring {
+
+            &--large-1 {
+                right: 31.5%;
+                top: 124.5%;
+            }
+
+            &--large-2 {
+                top: -3%;
+                left: 35%;
+            }
+
+            &--xl {
+                left: 0;
+                top: 80%;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (min-width:1400px) {
+
+    .icon-bar-image {
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: space-between;
         margin: 0;
         row-gap: 167px;
+        margin: 173px 0 0 0;
 
         &--not-ios {
             justify-content: flex-start;
@@ -60,14 +128,13 @@
         }
 
         &__images {
-            width: 34%;
+            width: 28%;
             display: flex;
             justify-content: flex-end;
             max-width: 380px;
         }
 
         &__image {
-            margin: 173px 0 0 0;
             padding: 0;
             height: 661px;
             width: 331px;
@@ -75,6 +142,25 @@
 
         &__multi-icons {
             width: 100%;
+        }
+
+        &__ring {
+
+            &--large-1 {
+                right: 9%;
+                top: 80.5%;
+            }
+
+            &--large-2 {
+                top: -3%;
+                left: 35%;
+            }
+
+            &--xl {
+                left: 0;
+                top: 98%;
+            }
+
         }
     }
 

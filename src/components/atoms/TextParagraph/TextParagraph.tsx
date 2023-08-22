@@ -18,7 +18,7 @@ export const TextParagraph = ({ title, text, button, isIos}: TextParagraphProps)
                 <Text tag='h2' modifier={button === true ? 'heading2-small' : ''}>{title}</Text>
                 <Text tag={button === true ? 'h4' : 'p'}>{text}</Text>
             </div>
-            {button && <Button text='Try it for free' size='button-lg' ios={isIos}/>}
+            {button && <Button text='Try it for free' size='button-md-lg' ios={isIos}/>}
         </div>
     )
 

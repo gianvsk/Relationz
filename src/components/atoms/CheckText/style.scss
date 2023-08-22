@@ -1,4 +1,6 @@
-.icon-text {
+.check-text {
+    display:flex;
+    align-items: center;
 
     &__body {
         display: flex;
@@ -33,13 +35,14 @@
 
 @media screen and (min-width:768px) {
 
-    .icon-text {
+    .check-text {
 
         &__image {
             height: 10px;
 
             &--checkbox {
-                height: 13px;
+                height: 11px;
+                width: 20px;
                 margin: 0;
             }
         }

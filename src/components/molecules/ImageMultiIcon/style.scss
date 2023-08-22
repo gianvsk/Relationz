@@ -9,6 +9,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width:100%;
+        row-gap: 32px;
 
         &--visible-xs {
             display:flex;
@@ -23,6 +24,7 @@
 @media screen and (min-width: 768px) {
     
     .image-multi-icon {
+        padding: 0 20px;
 
         &__icon-container {
             justify-content: space-around;

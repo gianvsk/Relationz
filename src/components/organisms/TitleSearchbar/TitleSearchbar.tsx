@@ -11,7 +11,7 @@ type TitleSearchbarProps = {
     ios: boolean
 }
 
-export const TitleSearchbar = ({ios, title, text, paragraph} : TitleSearchbarProps) => {
+export const TitleSearchbar = ({ ios, title, text, paragraph }: TitleSearchbarProps) => {
 
     return (
         <section className='title-searchbar'>
@@ -35,9 +35,9 @@ export const TitleSearchbar = ({ios, title, text, paragraph} : TitleSearchbarPro
                 <Searchbar ios={ios}></Searchbar>
             </div>
             <div className={clsx('title-searchbar__list', { 'title-searchbar__list--no-ios': !ios })}>
-                <CheckText text='Synced contacts' color='grey'/>
-                <CheckText text='Regular reminders' color='grey'/>
-                <CheckText text='The multichannel' color='grey'/>
+                <CheckText text='Synced contacts' color='grey' />
+                <CheckText text='Regular reminders' color='grey' />
+                <CheckText text='The multichannel' color='grey' />
             </div>
         </section>
     )

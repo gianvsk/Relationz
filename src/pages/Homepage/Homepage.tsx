@@ -6,7 +6,7 @@ import { Text } from "../../components/atoms/Text/Text"
 import './style.scss'
 import { Card } from "../../components/molecules/Card/Card"
 import { CardDetail } from "../../components/molecules/CardDetails/CardDetails"
-import { MicroContainer } from "../../components/molecules/MicroContainer/MicroContainer"
+import { Hero } from "../../components/organisms/Hero/Hero"
 
 type HomepageProps = {
     ios: boolean
@@ -17,13 +17,13 @@ export const Homepage = ({ ios }: HomepageProps) => {
     return (
         <div className="homepage">
             <IconBarImage ios={ios} />
+            <Hero ios={ios}/>
             <ParagraphListCard
                 source={['/images/icons/GreenBell.svg', '/images/icons/BlueBell.svg']}
                 title='Get reminders to follow up'
                 text='We remind you of everything important and track everything that’s important to your important ones so you always 
               stay connected. We only tell you the details when you need them the most.'
                 textIcon={['Birthdays', 'Business Meetings', 'Friends & Family', 'Surroundings']}
-                cardType='default'
                 ios={ios}
             >
                 <PictureText
@@ -108,8 +108,8 @@ export const Homepage = ({ ios }: HomepageProps) => {
         while Sales can focus on what really matters - closing while Sales can focus on what really matters - closing'
                 ios={ios}
             />
-            <MicroContainer/>
         </div>
+
 
     )
 

@@ -4,7 +4,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
-    margin: 80px 0 0 0;
 
     &__container {
         flex-direction: column;
@@ -73,6 +72,10 @@
             width: 50%;
             display: flex;
             align-items: flex-end;
+        }
+
+        &__icon--spaced {
+            margin:0;
         }
 
         &__icon {

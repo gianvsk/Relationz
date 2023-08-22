@@ -22,16 +22,16 @@ export const CheckText = ({ text, color}: CheckTextProps) => {
     }, [color])
 
     return (
-        <div className="icon-text">
+        <div className="check-text">
 
             {color === 'checkbox' &&
-                <div className='icon-text__checkbox'>
-                    <img className='icon-text__image icon-text__image--checkbox' src='/images/icons/Vector1.svg' />
+                <div className='check-text__checkbox'>
+                    <img className='check-text__image check-text__image--checkbox' src='/images/icons/Vector1.svg' />
                 </div>
             }
 
             {color !== 'checkbox' &&
-                <img className='icon-text__image' src={setColor} />
+                <img className='check-text__image' src={setColor} />
             }
 
             <Text tag='span' modifier='span-icon-small'>{text}</Text>

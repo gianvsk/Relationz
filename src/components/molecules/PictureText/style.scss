@@ -1,30 +1,30 @@
+@import '../../../style/style.scss';
+
 .picture-text {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 17px 13px 16px 15px;
     box-shadow: 0px 12.316177368164062px 49.26470947265625px 0px #F2F5FA;
     border-radius: 14.779px;
     background: #FFF;
 
-    &--no-padding {
-        padding:0;
+    &--large {
+        width:100%;
+        padding: 0;
+        box-shadow: none;
     }
 
     &__container {
-        width:100%;
-        display:flex;
+        width: 100%;
+        display: flex;
+        padding: 17px 13px 16px 15px;
 
-        &--card-large {
+        &--large {
             box-shadow: none;
-            display:flex;
+            display: flex;
             align-items: center;
+            padding: 0;
         }
-    }
-
-    &--spacing-off {
-        padding: 0;
-        align-items: center;
     }
 
     &__image {
@@ -38,15 +38,15 @@
             height: 24px;
         }
 
-        &--card-large {
-            width:32px;
-            height:32px;
+        &--large {
+            width: 32px;
+            height: 32px;
         }
     }
 
     &__text {
         margin: 0 0 0 10px;
-        width:80%;
+        width: 85%;
 
         &--spacing-off {
             margin: 0;
@@ -58,21 +58,31 @@
     box-shadow: none;
 }
 
+.display-none {
+    display: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
 @media screen and (min-width: 768px) {
 
     .picture-text {
-        padding: 24.37px 13px 23.63px 24px;
+
         box-shadow: 0px 0px 80px 0px #F2F5FA;
         border-radius: 24px;
 
-        &--no-padding {
-            padding:0;
+        &--large {
+            padding: 0;
+            box-shadow: none;
         }
 
         &__container {
+            padding: 24.37px 26px 22.63px 24px;
 
-            &--card-large {
-                box-shadow: none;
+            &--large {
+                padding: 0;
             }
         }
 
@@ -85,15 +95,14 @@
                 height: 24px;
             }
 
-            &--card-large {
-                width:60px;
-                height:60px;
+            &--large {
+                width: 60px;
+                height: 60px;
             }
         }
 
         &__text {
-            width:90%;
+            width: 90%;
         }
     }
-
 }

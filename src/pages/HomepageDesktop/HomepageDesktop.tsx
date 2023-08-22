@@ -6,6 +6,7 @@ import { PictureParagraph } from "../../components/organisms/PictureParagraph/Pi
 import { Text } from "../../components/atoms/Text/Text"
 import './style.scss'
 import { PictureText } from "../../components/molecules/PictureText/PictureText"
+import { Hero } from "../../components/organisms/Hero/Hero"
 
 type HomepageDesktop = {
     ios: boolean
@@ -16,13 +17,13 @@ export const HomepageDesktop = ({ios}: HomepageDesktop) => {
     return (
         <div className="homepage-desktop">
             <IconBarImage ios={ios}/>
+            <Hero ios={ios}/>
             <ParagraphListCard
                 source={['/images/icons/GreenBell.svg', '/images/icons/Channel.svg']}
                 title='Get reminders to follow up'
                 text='We remind you of everything important and track everything that’s important to your important ones so you always 
               stay connected. We only tell you the details when you need them the most.'
                 textIcon={['Birthdays', 'Business Meetings', 'Friends & Family', 'Surroundings']}
-                cardType='default'
                 ios={ios}
             >
                 <PictureText

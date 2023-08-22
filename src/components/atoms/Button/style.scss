@@ -6,6 +6,11 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    color:white;
+
+    &:hover {
+        color:white;
+    }
 
     &--small {
         width:20%;
@@ -17,11 +22,19 @@
         border-radius: 20.938px;
         height:30px;
     }
+
+    &--medium-large {
+        border-radius: 20.938px;
+        width:115px;
+        height: 30px;
+        padding: 0 12px;
+    }
     
     &--large {
         border-radius: 49px;
-        width:40.57%;
-        height: 30px;
+        width:99px;
+        height: 40px;
+        padding: 0 12px;
     }
     
     &--blue {
@@ -50,6 +63,12 @@
             border-radius: 49px;
             height:46px;
             width:171px;
+        }
+
+        &--medium-large {
+            border-radius: 49px;
+            width:225px;
+            height: 60px;
         }
         
         &--large {
